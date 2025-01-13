@@ -18,8 +18,8 @@ class Button
             rect->x = x;
             rect->y = y;
             count = 0;
-            surface[0] = SDL_LoadBMP(("./Images/"+name+"0.bmp").c_str());
-            surface[1] = SDL_LoadBMP(("./Images/"+name+"1.bmp").c_str());
+            surface[0] = SDL_LoadBMP(("../Images/"+name+"0.bmp").c_str());
+            surface[1] = SDL_LoadBMP(("../Images/"+name+"1.bmp").c_str());
         }
 
         string control(SDL_Event &event){
@@ -31,7 +31,7 @@ class Button
                     }
                     else{
                         count = 0;
-                    }
+                    
                 }
                 else if(event.key.keysym.sym == SDLK_DOWN|| event.key.keysym.sym == SDLK_RIGHT){
                     if(count==1){
